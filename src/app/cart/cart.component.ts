@@ -8,13 +8,7 @@ import { CurrencyPipe } from '@angular/common';
   styleUrls: ['./cart.component.css'],
 })
 export class CartComponent {
-  currency: any;
   items = this.cartService.getItems();
 
-  constructor(
-    private cartService: CartService,
-    private currency_pipe_object: CurrencyPipe
-  ) {
-    this.currency = currency_pipe_object;
-  }
+  constructor(private cartService: CartService) {}
 }
